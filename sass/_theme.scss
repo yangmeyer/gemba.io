@@ -10,7 +10,7 @@
 **************************************************************************/
 
 //Global SASS Variables
-$dominantColour: #42a35a;
+$dominantColour: #4ea3b5;
 $secondaryColour: #1a1e23;
 
 /**
@@ -275,7 +275,7 @@ $secondaryColour: #1a1e23;
 
 .site-header {
 	background-color:$dominantColour;
-	background-image: url('http://placehold.it/1800x757');
+	/* background-image: url('http://placehold.it/1800x757'); */
 	background-repeat:no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
