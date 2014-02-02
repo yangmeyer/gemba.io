@@ -311,8 +311,8 @@ $secondaryColour: #1a1e23;
 	@include transition(all 0.3s ease);
 	&:hover {
 		color:#fff;
-		border-color:$secondaryColour;
-		background-color:$secondaryColour;
+		/* border-color:$secondaryColour; */
+		background-color:$dominantColour;
 	}
 }
 
@@ -482,7 +482,7 @@ $secondaryColour: #1a1e23;
 * Features Section 
 *****************************************************/
 
-$featureCircleBGColour: lighten($secondaryColour, 18%);
+$featureCircleBGColour: lighten($dominantColour, 18%);
 
 .section-features {
 	background-color:#f2f2f2;
@@ -498,15 +498,19 @@ $featureCircleBGColour: lighten($secondaryColour, 18%);
 	text-align:center;
 	&:hover {
 		.features-circle {
-			background-color:darken($featureCircleBGColour, 3%);
+			background-color:darken($featureCircleBGColour, 5%);
+			/*
 			border-color:lighten($featureCircleBGColour, 20%);
+			*/
 		}
+		/*
 		i {
 			animation: fullSpin 0.5s;
     		-webkit-animation: fullSpin 0.5s;
     		-moz-animation: fullSpin 0.5s;
     		-o-animation: fullSpin 0.5s;
 		}
+		*/
 	}
 }
 
@@ -760,7 +764,7 @@ $featureCircleBGColour: lighten($secondaryColour, 18%);
 *****************************************************/
 
 .section-testimonials {
-	padding:150px 0 60px 0;
+	padding:50px 0 50px 0;
 	background:$secondaryColour url('http://placehold.it/1800x900') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -784,6 +788,36 @@ $featureCircleBGColour: lighten($secondaryColour, 18%);
 	font-weight: 700;
 	letter-spacing: 3px;
 	margin-top:40px;
+}
+
+/**
+* Personal message Section 
+*****************************************************/
+
+.section-personal-message {
+	padding:70px 40px 40px 40px;
+	/*
+	background:lighten($secondaryColour, 50%);
+	*/
+	background-color: #fff; /*#f2f2f2; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	text-align:left;	
+	h1,h2,h3,h4,h5,h6,p {
+		color:$secondaryColour;
+	}
+	.personal-message-greeting, .personal-message-author {
+		font-style: italic;
+		color: darken(#fff, 50%);
+		font-size: 1.3em;
+	}
+	.personal-message-greeting {
+		font-size: 1.3em;
+	}
+	.personal-message-author {
+		text-align: right;
+	}
 }
 
 /**

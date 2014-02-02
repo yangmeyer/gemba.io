@@ -6905,8 +6905,8 @@ table {
   transition: all 0.3s ease; }
   .bordered-button:hover {
     color: #fff;
-    border-color: #1a1e23;
-    background-color: #1a1e23; }
+    /* border-color:$secondaryColour; */
+    background-color: #4ea3b5; }
 
 /**
 * Main Content & Section General Styles 
@@ -7072,24 +7072,30 @@ table {
   @media only screen and (min-width: 940px) {
     .features-item {
       width: 33.33333%; } }
-  .features-item:hover .features-circle {
-    background-color: #3b444f;
-    border-color: #6d7d92; }
-  .features-item:hover i {
-    animation: fullSpin 0.5s;
-    -webkit-animation: fullSpin 0.5s;
-    -moz-animation: fullSpin 0.5s;
-    -o-animation: fullSpin 0.5s; }
+  .features-item:hover {
+    		/*
+    		i {
+    			animation: fullSpin 0.5s;
+        		-webkit-animation: fullSpin 0.5s;
+        		-moz-animation: fullSpin 0.5s;
+        		-o-animation: fullSpin 0.5s;
+    		}
+    		*/ }
+    .features-item:hover .features-circle {
+      background-color: #7dbbc9;
+      /*
+      border-color:lighten($featureCircleBGColour, 20%);
+      */ }
 
 .features-circle {
   display: block;
   position: relative;
   border-radius: 50%;
-  background-color: #414b58;
+  background-color: #8fc5d0;
   width: 180px;
   height: 180px;
   margin: 0 auto 30px auto;
-  border: 10px solid rgba(33, 38, 44, 0.3);
+  border: 10px solid rgba(89, 169, 186, 0.3);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -7289,7 +7295,7 @@ table {
 * Testimonials Section 
 *****************************************************/
 .section-testimonials {
-  padding: 150px 0 60px 0;
+  padding: 50px 0 50px 0;
   background: #1a1e23 url("http://placehold.it/1800x900") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7309,6 +7315,31 @@ table {
   font-weight: 700;
   letter-spacing: 3px;
   margin-top: 40px; }
+
+/**
+* Personal message Section 
+*****************************************************/
+.section-personal-message {
+  padding: 70px 40px 40px 40px;
+  /*
+  background:lighten($secondaryColour, 50%);
+  */
+  background-color: #fff;
+  /*#f2f2f2; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align: left; }
+  .section-personal-message h1, .section-personal-message h2, .section-personal-message h3, .section-personal-message h4, .section-personal-message h5, .section-personal-message h6, .section-personal-message p {
+    color: #1a1e23; }
+  .section-personal-message .personal-message-greeting, .section-personal-message .personal-message-author {
+    font-style: italic;
+    color: gray;
+    font-size: 1.3em; }
+  .section-personal-message .personal-message-greeting {
+    font-size: 1.3em; }
+  .section-personal-message .personal-message-author {
+    text-align: right; }
 
 /**
 * Sign Up Section 
