@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Gemba’s Changelog</title>
+        <link>http://gemba.io/releases/gemba-appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        
+        <!-- newer versions here -->
+
+        <item>
+            <title>Version 0.8.1 (8 bugs fixed; 1 new feature)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/0.8.1.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Mon, 25 Aug 2014 12:20:11 +0000</pubDate>
+            <enclosure url="https://www.dropbox.com/s/al1tz0tmcapjtqp/Gemba%200.8.1%20beta.zip?dl=1" sparkle:version="19" sparkle:shortVersionString="0.8.1" length="1696569" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.8</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>
