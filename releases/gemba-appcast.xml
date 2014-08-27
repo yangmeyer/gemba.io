@@ -7,6 +7,16 @@
         <language>en</language>
         
         <!-- newer versions here -->
+        
+        <item>
+            <title>Version 0.8.2 (2 bugs fixed)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/0.8.2.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 27 Aug 2014 14:57:11 +0100</pubDate>
+            <enclosure url="https://www.dropbox.com/s/yvzuqdggb00pyhz/Gemba%20v0.8.2%20beta.zip?dl=1" sparkle:version="20" sparkle:shortVersionString="0.8.2" length="2741767" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.8</sparkle:minimumSystemVersion>
+        </item>
 
         <item>
             <title>Version 0.8.1 (8 bugs fixed; 1 new feature)</title>

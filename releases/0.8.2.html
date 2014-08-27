@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Gemba – 0.8.2 beta</title>
+	<link rel="stylesheet" href="../css/gumby.css">
+	</head>
+
+<body>
+	<p>Thanks for all the bug reports and feedback so far! I’ve addressed some of the issues in this release.</p>
+
+	<h3>Bugfixes</h3>
+
+	<ul>
+	<li>User-provided summary was missing in commit message.</li>
+	<li>Discard while pulling led to errors and polluted local repo with a temp commit.</li>
+	</ul>
+
+	<h3>Improvements</h3>
+
+	<ul>
+	<li>Subsequent beta updates will be served through Sparkle.</li>
+	<li>Add an explanatory comment to the auto-generated .gemba file.</li>
+	</ul>
+
+	<h3>UI tweaks</h3>
+
+	<ul>
+	<li>Summary field now stays enabled while refreshing.</li>
+	<li>Append &quot;(new)&quot; to asset name, instead of &quot;+&quot; marker.</li>
+	<li>Improved switching between repos.</li>
+	<li>URL field is now disabled while cloning.</li>
+	</ul>
+
+	<h3>Known issues</h3>
+
+	<ul>
+	<li>Filenames containing umlauts (and probably other non-ASCII) seriously confuse Git, and subsequently, Gemba.</li>
+	<li>Missing user feedback after dragging in Unchanged asset.</li>
+	<li>The app icon is a placeholder.</li>
+	</ul>
+
+	<p>If you have any questions at all, drop me a line at <a href="mailto:yang@gemba.io">yang@gemba.io</a>. Thanks!</p>
+
+  </body>
+</html>
