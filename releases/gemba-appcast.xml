@@ -13,8 +13,8 @@
             <sparkle:releaseNotesLink>
                 http://gemba.io/releases/0.8.1.html
             </sparkle:releaseNotesLink>
-            <pubDate>Mon, 25 Aug 2014 12:20:11 +0000</pubDate>
-            <enclosure url="https://www.dropbox.com/s/al1tz0tmcapjtqp/Gemba%200.8.1%20beta.zip?dl=1" sparkle:version="19" sparkle:shortVersionString="0.8.1" length="1696569" type="application/octet-stream" />
+            <pubDate>Mon, 11 Aug 2014 12:20:11 +0000</pubDate>
+            <enclosure url="https://www.dropbox.com/s/eycpzb6jva2mygv/Gemba%200.8.1%20beta.zip?dl=1" sparkle:version="19" sparkle:shortVersionString="0.8.1" length="1696569" type="application/octet-stream" />
             <sparkle:minimumSystemVersion>10.8</sparkle:minimumSystemVersion>
         </item>
     </channel>
