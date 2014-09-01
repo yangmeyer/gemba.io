@@ -14,7 +14,7 @@
 			 More info: h5bp.com/b/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Gemba – Developer FAQ – Enjoyable “git push assets” for Designers</title>
+	<title>Gemba – Designer FAQ – Enjoyable “git push assets” for Designers</title>
 	<meta name="description" content="Gemba is a Mac app that lets designers integrate assets directly into their apps’ Git repositories through a sweet user interface." />
 	
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
@@ -23,10 +23,10 @@
 	<meta property="fb:page_id" content="" />
 	<meta property="og:image" content="facebook.jpg" />
 	<meta property="og:description" content="Gemba is a Mac app that lets designers integrate assets directly into their apps’ Git repositories through a sweet user interface."/>
-	<meta property="og:title" content="Gemba – Developer FAQ – Enjoyable “git push assets” for Designers"/>
+	<meta property="og:title" content="Gemba – Designer FAQ – Enjoyable “git push assets” for Designers"/>
 
 	<!-- Google+ Metadata /-->
-	<meta itemprop="name" content="Gemba – Developer FAQ – Enjoyable “git push assets” for Designers">
+	<meta itemprop="name" content="Gemba – Designer FAQ – Enjoyable “git push assets” for Designers">
 	<meta itemprop="description" content="Gemba is a Mac app that lets designers integrate assets directly into their apps’ Git repositories through a sweet user interface.">
 	<meta itemprop="image" content="facebook.jpg">
 
@@ -47,8 +47,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<h1>Gemba</h1>
-				<h2 class="eleven columns centered">Developer FAQ *)</h2>
-				<p style="clear:both">*) because it’s our job to be skeptical and think about edge cases.</p>
+				<h2 class="eleven columns centered">Designer FAQ</h2>
 			</div>
 		</div>
 	</header>
@@ -61,53 +60,45 @@
 
 				<h3>What is Gemba?</h3>
 
-				<p>Technically, Gemba is a designer-friendly GUI to a subset of Git. It focusses on asset delivery, cutting all the crap and complexity that is great for us developers but frustrating and off-putting for designers.</p>
+				<p>Gemba is a Mac app that lets you deliver exported graphical assets (by default, .png, .jpg and .gif files) into a remote Git repository. It warns you about potential problems, so you can fix them before delivering the assets.</p>
 
-				<h3>What’s in it for me?</h3>
+				<h3>Does Gemba work with my design tool of choice?</h3>
 
-				<p>Time and concentration: No need for you to move assets from Dropbox, e-mails or .zip files into the Git repository.</p>
-
-				<p>Less faulty assets: Gemba warns the designer about faulty Retina dimensions, mismatched dimensions for updates, etc – so you don’t need to.</p>
-
-				<h3>How do designers use the app?</h3>
-
-				<p>Designers prepare changes for any number of assets, and then “deliver” them. They drag their assets into the app, review potential problems, describe what they changed, and press the “Deliver Changes” button.</p>
-
-				<h3>What happens under the hood?</h3>
-
-				<p>For each set of changes, a commit is created with the changed assets, it is played on top of the tracking remote branch (e.g. origin/master), and pushed to origin. Effectively: add, commit, pull (rebase), push.</p>
-
-				<h3>Where in the working directory do assets go?</h3>
-
-				<p>Existing assets are simply replaced (filename matching).</p>
-
-				<p>New assets are put in a default folder, which you can specify in the .gemba file. If you <code>git mv</code> an asset to a new location, subsequent asset updates will go there.</p>
-
-				<h3>What if we work on feature branches?</h3>
-
-				<p>That&#39;s great, because you can just tell your designer to switch to that branch.</p>
-
-				<h3>Merge conflicts! What about merge conflicts?</h3>
-
-				<p>Ah, the first question that invariably springs to our traumatized developer minds…</p>
-
-				<p>In practice, this should be a fairly rare case for assets, with most designers practicing “PSD ownership” (in contrast to us enlightened agile ninjas, who have all but renounced code ownership… right?). But if shit happens anyway, the designer simply may choose --ours or --theirs.</p>
-
-				<h3>How can I help my designer with getting started?</h3>
-
-<!--
-				<p>Use this simple form to <a href="http://gemba.io/onboard/preconfig">pre-configure a repository</a> for your designer.</p>
-			-->
-
-				<p><!-- Or adapt -->Adapt this <a href="http://gemba.io/onboard/sample.gemba">sample .gemba file</a> to your repository’s needs (it’s a simple, well-commented YAML/JSON file), and send it to your designer.</p>
-
-				<h3>Technical Requirements?</h3>
-
-				<p>Gemba runs on Mac OS X 10.9 upwards (Mavericks and Yosemite), and you need a hosted Git repo to which the assets shall be pushed.</p>
+				<p>Yes. Gemba works with anything that exports asset files (.png, .jpg, and .gif by default). Sketch works great of course, as does Photosho, both with PS Generator and Slicy.</p>
 
 				<h3>Does Gemba work with our Git repositories?</h3>
 
 				<p>Yes. Gemba works with any Git repository on any hosting service (GitHub, Bitbucket etc) or self-hosted server (Stash, Gitlab etc).</p>
+
+				<h3>What do I need to get started?</h3>
+
+				<p>If you’re new to Git, let your developer know you want to deliver your assets with Gemba, and ask him/her to make a simple .gemba configuration file for you. Ask your developer to adapt this sample file to your repository’s needs: <a href="http://gemba.io/onboard/sample.gemba">http://gemba.io/onboard/sample.gemba</a></p>
+
+				<p>If you have worked (or dabbled) with Git before: Check that you have “write access” to the Git repository you want to deliver into, and get the Git repository’s URL (it should start with “https://”). Ask your developer or admin if unsure.</p>
+
+				<h3>When I drop assets into Gemba, what happens?</h3>
+
+				<p>First of all, nothing gets sent to the Git repository before you press Deliver Changes. You prepare a set of changes for any number of assets (e.g. for one part of your app), and only when you’re ready, you deliver the set of changes.</p>
+
+				<p>You add new or updated assets by dropping them into Gemba. You can discard and overwrite these undelivered changes if needed. When you’re ready to deliver your set of changes, press Deliver Changes.</p>
+
+				<h3>Where do the assets go?</h3>
+
+				<p>If you’re updating an asset that already exists somewhere in the Git repository, it will replace it. (It matches the filenames.)</p>
+
+				<p>If you’re adding a new asset, Gemba will put it in a special folder (“Images/” by default; developers can configure this).</p>
+
+				<h3>How will my developers know that I’ve delivered assets to the Git repository?</h3>
+
+				<p>No need to inform them – they’ll see your “commits”. Each set of changes that you deliver to the Git repository is packaged up into a commit, which the developers will see. Every one of your commits contains your asset changes, your summary notes, a listing of the potential problems with the assets.</p>
+
+				<h3>What if my developers are skeptical of me using Gemba?</h3>
+
+				<p>Point them to the <a href="faq-developer.html">Developer FAQ</a>, which explains why you using Gemba is absolutely fantastic for them, too. They’ll love you for it!</p>
+
+				<h3>Technical Requirements?</h3>
+
+				<p>Gemba runs on Mac OS X 10.9 upwards (Mavericks and Yosemite), and you need a hosted Git repository to which the assets shall be pushed.</p>
 
 				<h3>Can we use Gemba for our Android/Web/… projects?</h3>
 
