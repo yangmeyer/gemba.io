@@ -1,0 +1,68 @@
+
+# This is a sample .gemba configuration file that you can adapt to your
+# repository. Send it to your designer and tell him/her to double-click
+# this .gemba file.
+
+
+# -- REQUIRED ------------------------------------------------------------
+
+# Where is the Git repository hosted? (Use the HTTPS URL, if possible.)
+# IMPORTANT: Make sure your designer has write access to this repository!
+
+remote_url: https://github.com/yourcompany/yourrepo.git
+
+# Use SSH only if:
+# - you know that your designer has SSH keys set up (and posted the public
+#   key to the hosting platform);
+# - you’d normally use 2-factor authentication, which Gemba doesn't support yet.
+
+
+# -- OPTIONAL ------------------------------------------------------------
+#    (this file shows the defaults)
+
+# Where should new assets from the designer go?
+# (You can then move them, e.g. into an Asset Catalog, and subsequent asset 
+# updates will go to that new location.)
+
+new_assets_dir: Images/
+
+
+# What should count as assets?
+
+asset_extensions:
+- jpeg
+- jpg
+- png
+- gif
+
+
+# Which directories should not be searched for matching asset filenames?
+
+ignored_dirs:
+- Pods
+- Frameworks
+- Submodules
+- External
+
+
+# What should the repository be called in Gemba?
+
+repo_name: yourrepo  # defaults to last part of remote_url
+
+
+# Where is the app icon to use in Gemba?
+
+# icon_path:         # if not specified, looks for a file named
+                     # Icon[…].png, icon[…].png, iTunesArtwork, favicon[…]
+
+
+# -- NOTES --------------------------------------------------------------
+# 
+# The .gemba file will be added to your repository together with the first
+# pushed asset changes. You can always change the .gemba file later, and 
+# your designers will use your updated config next time they use Gemba.
+# 
+# If you have any questions, drop me a line at support@gemba.io
+# 
+# PS: If you prefer JSON, go ahead and convert this file (and delete the
+#     comments). YAML is just a more human-readable superset of JSON.
