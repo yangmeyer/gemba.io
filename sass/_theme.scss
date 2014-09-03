@@ -13,6 +13,9 @@
 $dominantColour: #4ea3b5;
 $secondaryColour: #1a1e23;
 
+$accentColour: #ff8400;
+$ribbonColour: #e5f3f8;
+
 /**
 * Reusable animations & classes
 * Animations can be attached to any element using a class with their name.
@@ -759,26 +762,55 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	padding: 10px;
 }
 
+
 /**
 * Testimonials Section 
 *****************************************************/
 
 .section-testimonials {
-	padding:50px 0 50px 0;
-	background:$secondaryColour url('http://placehold.it/1800x900') no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	text-align:center;	
-	h1,h2,h3,h4,h5,h6,p {
-		color:#fff;
-		text-align:center;
+	background-color: $ribbonColour;
+
+	blockquote {
+		clear:both;
+		margin:1.2em 0;
+		border:0;
+		font-size:1.3rem;
+		quotes: "“" "”";
+		color:$secondaryColour;
+		color:$dominantColour;
+		line-height:1.5rem;
 	}
 
+	blockquote:before, blockquote:after {
+		display:block;
+		float:left;
+		margin-bottom:1em;
+		margin-right:0.12em;
+		line-height:0.4em;
+	    font-size:4.5em;
+		font-family:'Arial', Helvetica, sans-serif;
+		color:#c0d4dc;
+	}
+	blockquote:before {
+	    content: open-quote;
+	}
+
+	em {
+		font-weight:bold;
+		font-style:normal;
+	}
+
+	cite {
+		display:block;
+		margin:0.6rem 0;
+		text-align:right;
+		font-size:1.0rem;
+	}
 }
 
 .testimonials-quote-mark {
-	font-size:150px;
+	float:left;
+	font-size:70px;
 	line-height: 0;
 	font-family:'Arial', Helvetica, sans-serif;
 }
@@ -786,7 +818,7 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 .testimonials-author {
 	text-transform: uppercase;
 	font-weight: 700;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	margin-top:40px;
 }
 
@@ -796,9 +828,6 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 
 .section-personal-message {
 	padding:70px 40px 40px 40px;
-	/*
-	background:lighten($secondaryColour, 50%);
-	*/
 	background-color: #fff; /*#f2f2f2; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -806,6 +835,9 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	text-align:left;	
 	h1,h2,h3,h4,h5,h6,p {
 		color:$secondaryColour;
+	}
+	h1,h2,h3 {
+		text-align:center;
 	}
 	.personal-message-greeting, .personal-message-author {
 		font-style: italic;
@@ -818,6 +850,32 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	.personal-message-author {
 		text-align: right;
 	}
+
+	em {
+		font-weight:bold;
+		font-style:normal;
+	}
+}
+
+/**
+* Benefits Section 
+*****************************************************/
+
+.section-benefits {
+	h1,h2,h3,h4,h5,h6,p {
+		color:$secondaryColour;
+		text-align:center;
+	}
+
+	h3 {
+		margin-top:1.5rem;
+		font-weight:500;
+		font-size:1.3rem;
+	}
+	p {
+		font-size:0.8rem;
+		color:lighten($secondaryColour, 50%);
+	}
 }
 
 /**
@@ -825,9 +883,11 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 *****************************************************/
 
 .section-signup {
-	background-color:$dominantColour;
+	background-color:$ribbonColour;
+	padding:70px 0;
+
 	h1,h2,h3,h4,h5,h6,p{
-		color:#fff;
+		color:$secondaryColour;
 	}
 	h2 {
 		font-size:50px;
@@ -878,7 +938,7 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	width:70%;
 	outline:none;
 	font-size:18px;
-	border:5px solid #fff;
+	border:5px solid lighten($dominantColour, 25%);
 	@include border-radius(0);
 	-webkit-appearance:none;
 	&:focus {
@@ -908,6 +968,49 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	&:active {
 		background-color:darken($dominantColour, 18%);
 		border-color:darken($dominantColour, 18%);		
+	}
+	@media screen and (max-width: 500px) {
+		font-size:17px;
+		padding-top:21px;
+	}
+}
+
+.medium-input-side {
+	@extend %shared-form-inputs;
+	padding:5px;
+	width:70%;
+	outline:none;
+	font-size:1rem;
+	border:5px solid lighten($accentColour, 25%);
+	@include border-radius(0);
+	-webkit-appearance:none;
+	&:focus {
+		border-color:darken($accentColour, 0%);
+	}
+}
+
+.medium-btn-side {
+	@extend %shared-form-inputs;
+	padding:5px;
+	width:30%;
+	margin-left:-5px;
+	border:5px solid darken($accentColour, 0%);
+	font-size:1rem;
+	color:#fff;
+	font-weight: 600;
+	background-color:darken($accentColour, 0%);
+	-webkit-appearance:none;
+	padding-left:0;
+	padding-right:0;
+	@include border-radius(0);
+	&:hover {
+		cursor: pointer;
+		background-color:darken($accentColour, 0%);
+		border-color:darken($accentColour, 0%);
+	}
+	&:active {
+		background-color:darken($accentColour, 0%);
+		border-color:darken($accentColour, 0%);		
 	}
 	@media screen and (max-width: 500px) {
 		font-size:17px;

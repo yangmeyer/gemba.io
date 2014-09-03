@@ -43,149 +43,186 @@
 
 <body>
 	<!-- START: Site Header -->
-	<header role="banner" class="site-header parallax noise" gumby-parallax="0.5">
-		<div class="row">
-			<div class="twelve columns">
-				<h1>Gemba</h1>
-				<h2 class="eleven columns centered">Enjoyable “git push assets” for Designers.</h2>
+	<header role="banner" class="site-header" style="background:white; padding-bottom:20px">
+		<div class="row" style="padding-top:30px">
+			<div class="eight columns">
+				<img src="img/Gemba-mystery-icon.png" alt="Gemba icon: ?" style="float:left; margin-right:40px" />
+				<h1 style="text-align:left; color:#4ea3b5; padding-top:0.2em; font-size:60px">Gemba</h1>
+				<h2 style="text-align:left; color:#4ea3b5; padding-top:0.2em; font-size:2rem">Asset delivery to Git,<br />made for Designers</h2>
+
+				<!-- 
 				<p>Gemba lets you integrate assets directly into the app’s repository through a sweet user interface.</p>
-				<a href="#" class="skip bordered-button" gumby-goto="[data-target='signup']" gumby-duration="1000">Join the Beta</a>		
+				<a href="#" class="skip bordered-button" gumby-goto="[data-target='signup']" gumby-duration="1000">Join the Beta</a>
+			-->
+			</div>
+
+			<!-- START: Mini signup -->
+			<div class="four columns" id="mc_embed_signup">
+				<div style="background:#; padding:0.5em">
+				<p style="color:#666; font-size:0.9rem">Join some of the <strong>world’s best designer–developer teams:</strong></p>
+
+				<form role="form" action="http://app.us4.list-manage1.com/subscribe/post?u=5d34b5747a626d1665f586dd0&amp;id=c3bce2b566" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+	                <input class="medium-input-side" type="email" placeholder="Your e-mail address" autocomplete="off" name="EMAIL" id="mce-EMAIL" />
+	                <input type="submit" class="medium-btn-side" style="" value="Join Beta" name="subscribe" id="mc-embedded-subscribe" />
+	                <div class="catch-errors"></div>
+	                <div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_5d34b5747a626d1665f586dd0_c3bce2b566" value=""></div>
+		        </form>
+				</div>
 			</div>
 		</div>
 	</header>
 	<!-- /END: Site Header -->
 	<main role="main" class="site-main-content">
 		
-		<!-- START: Personal message Section -->
-		<section class="site-section section-personal-message">
+		<!-- START: Explainer -->
+		<section class="site-section">
 			<div class="row" data-scrollanimation="fadeUpIn">
-				<p class="personal-message-greeting">Dear app creator,</p>
-				<p>In the past four years of creating mobile apps, I have worked with many different designers on different teams. All teams faced similar challenges in the way designers and developers work together.</p>
-				<p>Gemba is an attempt to bring designers and developers closer together through better tooling, in the belief that more intimate collaboration makes for better apps.</p>
-				<p class="personal-message-author">—Yang Meyer, Stockholm</p>
+				<img src="img/gemba-explainer-schematic.png" width="1024" height="576" alt="Drop exported assets from your favorite design tool into Gemba. Then deliver into your team’s Git repository, with a simple click." />
+				<div class="ten columns centered">
+					<p style="text-align:center; font-size: 1.4em; margin:1em 0"><em style="font-weight:bold; font-style:normal">Drop your exported assets</em> into Gemba, and <em style="font-weight:bold; font-style:normal">deliver them</em><br /> to your app’s Git repository with a simple click.</p>
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Explainer  -->
+
+
+		<!-- START: Benefits Section -->
+		<section class="site-section section-benefits centered" data-target="benefits">
+			<div class="row">
+				<div class="one columns"></div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">Designers</h2>
+
+					<h3>Integrate assets whenever you want</h3>
+					<p>
+						Deliver assets straight into the Git repository, whenever you’re ready.<br />
+						No more waiting for your developers.
+					</p>
+
+					<h3>Find and fix problems</h3>
+					<p>
+						Gemba warns you about implausible and mismatching pixel sizes.<br />
+						Never deliver faulty assets again.
+					</p>
+
+					<h3>Your developers will LOVE you.</h3>
+					<p style="margin-top:2em;"><a href="faq-designer.html" style="font-weight:bold">Designer FAQ</a></p>
+				</div>
+
+				<div class="two columns" style="text-align:center; color:red; font-size:60px; padding-top:20px">
+					<i class="icon-heart"></i>
+				</div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">Developers</h2>
+
+					<h3>No more manual asset integration</h3>
+					<p>
+						Once you’ve integrated new assets, <em>once</em>, the designers will update them all by themselves. Have a coffee instead.
+					</p>
+
+					<h3>Review potential problems</h3>
+					<p>
+						See at a glance whether you need to tweak anything: Commit messages tell you about changed pixel sizes for updated assets.
+					</p>
+
+					<h3>Hug your designer!</h3>
+					<p style="margin-top:2em;"><a href="faq-developer.html" style="font-weight:bold">Developer FAQ</a></p>
+				</div>
+
+				<div class="one columns"></div>
+			</div>
+		</section>
+		<!-- END: Benefits Section -->
+
+		<!-- START: Testimonials Section -->
+		<section class="site-section section-testimonials ribbon" style="padding-top:50px; padding-bottom:0;">
+			<div class="row">
+				<div class="ten columns centered">
+					<blockquote>
+						With Gemba <em>designers can finally explore full potential of git workflow</em> and, dare I say, <em>enjoy using it.</em>
+						<cite><span class="testimonials-author">Andrey Zhukov</span>, Founding Engineer at Toca Boca</cite>
+					</blockquote>
+
+					<blockquote>
+						Gemba: <em>super simple</em> git tool for designers.
+						<cite><span class="testimonials-author">Drew Cogbill</span>, Senior Producer at Small Planet Digital</cite>
+					</blockquote>
+
+					<blockquote>
+					￼￼￼￼￼<em>Really interesting!</em>
+						<cite><span class="testimonials-author">John Maeda</span>, Design Partner at Kleiner Perkins Caufield &amp; Byers</cite>
+					</blockquote>
+				</div>
 			</div>
 		</section>		
 		<!-- /END: Testimonials Section  -->
 
-		<!-- START: Features Section -->
-		<section class="site-section section-features" data-target="features">
+		<!-- START: Personal message Section -->
+		<section class="site-section section-personal-message">
+			<div class="row">
+				<div class="ten columns centered">
+					<h2 style="margin-bottom:1em">The Gemba Story</h2>
+
+					<p>Over the past five years of creating mobile apps, I have worked with many different cross-functional teams. Over and over, I noticed the same challenges with <em>how we, as designers and developers, work together.</em></p>
+
+					<p>I believe that <em>deeper collaboration makes for better apps.</em> With Gemba, I hope to bring designers and developers closer together through better tooling. Gemba allows <em>designers to work on the living product itself</em> – the “real place”, or “Gemba” in Japanese.</p>
+
+					<p>If you have any questions or comments, <a href="mailto:yang@gemba.io">say hi!</a>
+
+					<p class="personal-message-author">—Yang Meyer, Stockholm</p>
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Personal message Section  -->
+
+
+		<!-- START: Sign Up Section -->
+		<section class="site-section section-signup ribbon" data-target="signup">
 			<!-- START: Section Header -->
 			<div class="row section-header">
 				<div class="twelve columns">
-					<h2>Gemba helps you…</h2>
-					<hr>
+					<h3>Early Access</h3>
+					<p style="margin:1em 0 1.5em 0">Some of the <strong>world’s best designer–developer teams</strong> are already using Gemba.<br />Join the Beta program and <strong>help make Gemba the best it can be:</strong></p>
 				</div>
 			</div>
 			<!-- /END: Section Header -->
-			<!-- START: Features List -->
-			<ul class="row features-list">
-				<!-- START: Feature Item -->
-				<li class="features-item" data-scrollanimation="fadeUpIn">
-					<span class="features-circle">
-						<span class="features-circle-icon">
-							<i class="icon-paper-plane"></i>
-						</span>
-					</span>						
-					<h3>Iterate painlessly</h3>
-					<p>Integrate asset updates whenever you want. <strong>No developer required.</strong></p>
-				</li>
-				<!-- /END: Feature Item -->
-				<!-- START: Feature Item -->
-				<li class="features-item" data-scrollanimation="fadeUpInLeft">
-					<span class="features-circle">
-						<span class="features-circle-icon">
-							<i class="icon-tools"></i>
-						</span>
-					</span>		
-					<h3>Detect problems</h3>			
-					<p>Gemba warns you about implausible and <strong>mismatching asset dimensions</strong>. <!-- e.g. blurry 43×43 Retina asset, mismatching Retina/non-Retina assets, differing dimensions from previous version. --></p>
-				</li>
-				<!-- /END: Feature Item -->
-				<!-- START: Feature Item -->
-				<li class="features-item" data-scrollanimation="fadeUpInRight">
-					<span class="features-circle">
-						<span class="features-circle-icon">
-							<i class="icon-trophy"></i>
-						</span>
-					</span>						
-					<h3>Be empowered</h3>
-					<p>Take responsibility over your design work <strong>where it matters:</strong> in the app.</p>
-				</li>
-				<!-- /END: Feature Item -->
-			</ul>
-			<!-- /END: Features List -->
-		</section>
-		<!-- /END: Features Section -->
-		
-		<!-- START: Gallery Section -->
-		<section class="site-section section-gallery">
-			<!-- START: Section Header -->
-			<div class="row section-header">
-				<div class="twelve columns">
-					<h2>Sneak Peek</h2>
-					<hr>
+			<div class="row">
+				<div class="seven columns centered" id="mc_embed_signup">
+
+					<form role="form" action="http://app.us4.list-manage1.com/subscribe/post?u=5d34b5747a626d1665f586dd0&amp;id=c3bce2b566" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+		                <input class="large-input-side" type="email" placeholder="Your e-mail address" autocomplete="off" name="EMAIL" id="mce-EMAIL" />
+		                <input type="submit" class="large-btn-side" value="Join Beta" name="subscribe" id="mc-embedded-subscribe" />
+		                <div class="catch-errors"></div>
+		                <div id="mce-responses" class="clear">
+	<div class="response" id="mce-error-response" style="display:none"></div>
+	<div class="response" id="mce-success-response" style="display:none"></div>
+</div>
+<div style="position: absolute; left: -5000px;"><input type="text" name="b_5d34b5747a626d1665f586dd0_c3bce2b566" value=""></div>
+
+						<p style="width:100%; margin-top:1.5em; text-align:center">No spam. <strong>Promise.</strong></p>
+			        </form>
+
 				</div>
-			</div>
-			<!-- /END: Section Header -->	
-			<!-- START: Gallery Slider -->		
-			<div class="gallery-slider-wrapper row" data-scrollanimation="fadeUpIn">
-				<ul class="gallery-slider twelve columns">
-					<li><img src="img/Gemba-screenshot.png" alt="Gemba for Mac screenshot"></li>
-				</ul>
-			</div>
-			<!-- /END: Gallery Slider -->
+			</div>				
 		</section>		
-		<!-- /END: Gallery Section  -->
+		<!-- /END: Sign Up Section  -->
 
-		<!-- START: Sign Up Section -->
-		<section class="site-section section-signup" data-target="signup">
-			<!-- START: Animation Wrapper -->
-			<div class="" data-scrollanimation="fadeDownIn">
-				<!-- START: Section Header -->
-				<div class="row section-header">
-					<div class="twelve columns">
-						<h3>Join the Beta</h3>
-						<p style="margin:1em 0 1.5em 0">Gemba is currently in beta. Sign up to join:</p>
-					</div>
-				</div>
-				<!-- /END: Section Header -->
-				<div class="row">
-					<div class="seven columns centered" id="mc_embed_signup">
-
-						<form role="form" action="http://app.us4.list-manage1.com/subscribe/post?u=5d34b5747a626d1665f586dd0&amp;id=c3bce2b566" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
-			                <input class="large-input-side" type="email" placeholder="Email address" autocomplete="off" name="EMAIL" id="mce-EMAIL" />
-			                <input type="submit" class="large-btn-side" value="Join" name="subscribe" id="mc-embedded-subscribe" />
-			                <div class="catch-errors"></div>
-			                <div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d34b5747a626d1665f586dd0_c3bce2b566" value=""></div>
-
-							<p style="width:100%; margin-top:1.5em; text-align:center">No spam. <strong>Promise.</strong></p>
-				        </form>
-
-					</div>
-				</div>				
-			</div>	
-			<!-- /END: Animation Wrapper  -->
-		</section>		
-		<!-- /END: Sign Up Section  -->		
 	</main>
 	<!-- START: Site Footer -->
 	<footer role="contentinfo" class="site-footer">
 		<div class="row">
-			<div class="eleven columns">
+			<div class="nine columns">
 				<p style="color:white">Copyright &copy; 2014 <a href="http://yangmeyer.de/" style="color:inherit">Yang Meyer</a>. Made in Stockholm.</p>
 			</div>
-			<div class="onw columns social-wrapper">
-				<ul class="social-list">
-					<li class="social-item">
-						<a href="http://twitter.com/gembaapp" class="social-link">
-							<i class="icon-twitter-circled"></i>
-						</a>
-					</li>
-				</ul>
+			<div class="three columns">
+				<p style="color:white">Share your excitement: <a href="http://twitter.com/gembaapp" class="social-linkxx" style="color:#4099FF; font-size:2.5em; vertical-align:middle"><i class="icon-twitter-circled" style="float:right"></i></a>
+				</p>
 			</div>
 		</div>
 	</footer>
