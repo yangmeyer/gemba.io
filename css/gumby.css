@@ -7324,6 +7324,9 @@ table {
     margin: 0.6rem 0;
     text-align: right;
     font-size: 1.0rem; }
+    .section-testimonials cite img {
+      vertical-align: middle;
+      margin-left: 0.5em; }
 
 .testimonials-quote-mark {
   float: left;
