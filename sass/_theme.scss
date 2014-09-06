@@ -894,7 +894,7 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 *****************************************************/
 
 .section-signup {
-	background-color:$ribbonColour;
+	background-color:white;
 	padding:70px 0;
 
 	h1,h2,h3,h4,h5,h6,p{
@@ -949,11 +949,11 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	width:70%;
 	outline:none;
 	font-size:18px;
-	border:5px solid lighten($dominantColour, 25%);
+	border:5px solid lighten($accentColour, 25%);
 	@include border-radius(0);
 	-webkit-appearance:none;
 	&:focus {
-		border-color:darken($dominantColour, 10%);
+		border-color:darken($accentColour, 0%);
 	}
 }
 
@@ -961,24 +961,24 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	@extend %shared-form-inputs;
 	width:30%;
 	margin-left:-5px;
-	border:5px solid darken($dominantColour, 10%);
+	border:5px solid darken($accentColour, 0%);
 	font-size:18px;
 	text-transform: uppercase;
 	color:#fff;
 	font-weight: 600;
-	background-color:darken($dominantColour, 10%);
+	background-color:darken($accentColour, 0%);
 	-webkit-appearance:none;
 	padding-left:0;
 	padding-right:0;
 	@include border-radius(0);
 	&:hover {
 		cursor: pointer;
-		background-color:darken($dominantColour, 15%);
-		border-color:darken($dominantColour, 15%);
+		background-color:darken($accentColour, 0%);
+		border-color:darken($accentColour, 0%);
 	}
 	&:active {
-		background-color:darken($dominantColour, 18%);
-		border-color:darken($dominantColour, 18%);		
+		background-color:darken($accentColour, 0%);
+		border-color:darken($accentColour, 0%);		
 	}
 	@media screen and (max-width: 500px) {
 		font-size:17px;

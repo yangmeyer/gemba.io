@@ -7373,19 +7373,22 @@ table {
 .section-benefits h1, .section-benefits h2, .section-benefits h3, .section-benefits h4, .section-benefits h5, .section-benefits h6, .section-benefits p {
   color: #1a1e23;
   text-align: center; }
-.section-benefits h3 {
+.section-benefits h3, .section-benefits h4 {
   margin-top: 1.5rem;
-  font-weight: 500;
+  font-weight: 500; }
+.section-benefits h3 {
+  font-size: 1.5rem; }
+.section-benefits h4 {
   font-size: 1.3rem; }
 .section-benefits p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #909cac; }
 
 /**
 * Sign Up Section 
 *****************************************************/
 .section-signup {
-  background-color: #e5f3f8;
+  background-color: white;
   padding: 70px 0; }
   .section-signup h1, .section-signup h2, .section-signup h3, .section-signup h4, .section-signup h5, .section-signup h6, .section-signup p {
     color: #1a1e23; }
@@ -7435,7 +7438,7 @@ table {
   width: 70%;
   outline: none;
   font-size: 18px;
-  border: 5px solid #a8d2db;
+  border: 5px solid #ffc280;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -7443,17 +7446,17 @@ table {
   border-radius: 0;
   -webkit-appearance: none; }
   .large-input-side:focus {
-    border-color: #3d8493; }
+    border-color: #ff8400; }
 
 .large-btn-side {
   width: 30%;
   margin-left: -5px;
-  border: 5px solid #3d8493;
+  border: 5px solid #ff8400;
   font-size: 18px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-  background-color: #3d8493;
+  background-color: #ff8400;
   -webkit-appearance: none;
   padding-left: 0;
   padding-right: 0;
@@ -7464,11 +7467,11 @@ table {
   border-radius: 0; }
   .large-btn-side:hover {
     cursor: pointer;
-    background-color: #367481;
-    border-color: #367481; }
+    background-color: #ff8400;
+    border-color: #ff8400; }
   .large-btn-side:active {
-    background-color: #316a76;
-    border-color: #316a76; }
+    background-color: #ff8400;
+    border-color: #ff8400; }
   @media screen and (max-width: 500px) {
     .large-btn-side {
       font-size: 17px;
