@@ -9,6 +9,16 @@
         <!-- newer versions here -->
         
         <item>
+            <title>Version 0.9.1 (2 bugs fixed)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/0.9.1.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Mon, 13 Oct 2014 18:00:00 +0100</pubDate>
+            <enclosure url="https://www.dropbox.com/s/5vbkzl5o5sxetb0/Gemba%20v0.9.1%20beta.zip?dl=1" sparkle:version="0.9.1" sparkle:shortVersionString="0.9.1" length="3565758" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
             <title>Version 0.9 (all assets, 4 bugs fixed)</title>
             <sparkle:releaseNotesLink>
                 http://gemba.io/releases/0.9.html
