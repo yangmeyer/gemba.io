@@ -36,6 +36,12 @@ asset_extensions:
 - gif
 
 
+# Should Gemba prefix commits with a string?
+# (Setting this to "[xyz]" results in commits like "[xyz] 3 assets changed". Note that the
+# quotation marks are necessary if you use square brackets!)
+#
+# commit_message_prefix: "[Gemba]"
+
 # Which directories should not be searched for matching asset filenames?
 
 ignored_dirs:
@@ -47,7 +53,7 @@ ignored_dirs:
 
 # What should the repository be called in Gemba?
 
-repo_name: yourrepo  # defaults to last part of remote_url
+# repo_name: yourrepo  # defaults to last part of remote_url
 
 
 # Where is the app icon to use in Gemba?
