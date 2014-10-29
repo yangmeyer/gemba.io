@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Gemba – 0.9.3 beta</title>
+	<style type="text/css">
+	body {
+		font-family:"Helvetica Neue", Helvetica;
+	}
+	</style>
+</head>
+
+<body>
+
+	<h3>New Features</h3>
+	<ul>
+	    <li>Onboarding option to try Gemba out with a sample repo.</li>
+	    <li>Added checks for @3x Retina HD assets.</li>
+	</ul>
+	</h3>
+
+	<h3>Fixed Bugs</h3>
+	<ul>
+		<li>Dropping non-assets was possible, dirtying the working directory.</li>
+    	<li>Show alert if local repositories don’t have a .gemba file.</li>
+	    <li>Dropped .gemba file was silently ignored if it points to a repo that already has a .gemba file.</li>
+    	<li>Crashed when loading a repository with no corresponding remote branch.</li>
+	</ul>
+
+	<h3>UI Fixes &amp; Improvements</h3>
+	<ul>
+		<li>.gemba files now previewable system-wide with Quick Look.</li>
+    	<li>Upon launch, the repo selection triangle was misplaced.</li>
+    	<li>Show info if dropped .gemba file will be ignored (when remote .gemba file exists).</li>
+	</ul>
+
+    <h3>Misc Improvements</h3>
+    <ul>
+	    <li>Gemba can recover from repositories being bisected.</li>
+    	<li>Repository health check now done on refresh.</li>
+    </ul>
+
+  </body>
+</html>
