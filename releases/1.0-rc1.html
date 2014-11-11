@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Gemba – 1.0 (RC1)</title>
+	<style type="text/css">
+	body {
+		font-family:"Helvetica Neue", Helvetica;
+	}
+	</style>
+</head>
+
+<body>
+
+	<h3>New Features</h3>
+		<ul>
+	    	<li>Xcode asset Catalog support (beta): add @3x assets to image sets with existing @1x/@2x counterparts. (See below for how-to and limitations.)</li>
+			<li>Repositories can now be removed.</li>
+		</ul>
+
+	<h3>Fixed Bugs</h3>
+	<ul>
+		<li>Crash after moving an asset remotely and dropping an update before the repository could pull. </li>
+    	<li>Could not connect to repository if Xcode is installed but was never launched; now shows alert with instructions to launch Xcode and accept its license.</li>
+    	<li>Cancel cloning dismissed UI but continued in the background.</li>
+    	<li>Could not open repository where the remote URL used for creating it did not match with the actual remote URL specified in the .gemba file that existed remotely.</li>
+    	<li>Truncated asset warnings.</li>
+    	<li>Selected-repository marker not always pointing to shown repository.</li>
+    </ul>
+
+    <h3>UI Improvements</h3>
+    <ul>
+    	<li>New app icon.</li>
+    	<li>Streamlined asset list, grouped by folder / image set.</li>
+    	<li>Re-organized top bar; clearer connection between asset filter and list.</li>
+    	<li>Delivery notes layout now matches commit message.</li>
+    	<li>Show number of assets in tabs.</li>
+    </ul>
+
+	<h3>Asset Catalog how-to</h3>
+
+	<p>Add an @3x asset to an existing image set (that already contains corresponding @1x or @2x assets) by dropping it into Gemba. The image set’s Contents.json will be updated automatically, and it will appear alongside the new @3x asset in the asset list.</p>
+	    
+	<h3>Asset Catalog limitations</h3>
+	
+	<ul>
+		<li>Gemba expects the traditional naming convention: “icon[@3x][~ipad].png”</li>
+		<li>Not supported yet: Adding new image sets to an asset catalog.</li>
+		<li>No plans to support: “Launch Image” sets, creating new asset catalogs, asset slicing, size classes, device-specific “568h” assets.</li>
+	</ul>
+
+  </body>
+</html>

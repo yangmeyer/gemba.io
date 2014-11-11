@@ -9,6 +9,16 @@
         <!-- newer versions here -->
         
         <item>
+            <title>Version 1.0 (RC1) (4 bugs fixed; asset catalogs, grouped asset list)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/1.0-rc1.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Tue, 11 Nov 2014 14:00:00 +0200</pubDate>
+            <enclosure url="https://paddle.s3.amazonaws.com/fulfillment_downloads/6987/495337/Gemba.zip" sparkle:version="0.9.5" sparkle:shortVersionString="1.0 (RC1)" length="4386709" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
             <title>Version 0.9.3 (4 bugs fixed; sample repository, @3x)</title>
             <sparkle:releaseNotesLink>
                 http://gemba.io/releases/0.9.3.html
