@@ -319,6 +319,28 @@ $ribbonColour: #e5f3f8;
 	}
 }
 
+.horizontaly-centered {
+  @media screen and (max-width: 500px) {
+    margin: 0 auto !important;
+  }
+}
+.horizontaly-centered-content {
+  text-align: center;
+}
+
+.pull-left-text {
+  text-align: left;
+  @media screen and (max-width: 500px) {
+    text-align: center;
+  }
+}
+.pull-left-block {
+  float: left;
+  @media screen and (max-width: 500px) {
+    float: none;
+  }
+}
+
 
 /**
 * Main Content & Section General Styles 
@@ -1025,7 +1047,7 @@ $featureCircleBGColour: lighten($dominantColour, 18%);
 	}
 	@media screen and (max-width: 500px) {
 		font-size:17px;
-		padding-top:21px;
+
 	}
 }
 
