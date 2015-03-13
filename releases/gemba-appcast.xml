@@ -9,6 +9,16 @@
         <!-- newer versions here -->
         
         <item>
+            <title>Version 0.9.7 (Beta 2) (2 bugs fixed; delivery-based trial, configuration panel, onboarding quest, choose target for new assets)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/0.9.7.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Thu, 12 Mar 2015 16:30:00 +0200</pubDate>
+            <enclosure url="https://vendors.paddle.com/download/product/495337" sparkle:version="0.9.7" sparkle:shortVersionString="0.9.7 (Beta 2)" length="15986917" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
             <title>Version 1.0 (RC1) (4 bugs fixed; asset catalogs, grouped asset list)</title>
             <sparkle:releaseNotesLink>
                 http://gemba.io/releases/1.0-rc1.html
