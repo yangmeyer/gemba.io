@@ -140,7 +140,8 @@ html, body {
       background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 5px;
-      text-align: right; }
+      text-align: right;
+      margin-right: 0; }
       .site-nav .menu-icon {
         display: block;
         float: right;
