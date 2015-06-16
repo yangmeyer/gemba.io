@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Gemba – Beta 3 (0.9.8)</title>
+	<style type="text/css">
+	body {
+		font-family:"Helvetica Neue", Helvetica;
+	}
+	</style>
+</head>
+
+<body>
+
+	<p>This “Beta 3” (v0.9.8) greatly improves the first-run experience so you can get started easier. Plus a slew of bugfixes and improvements.</p>
+
+	<h3>Better first-run experience</h3>
+	<ul>
+		<li>Illustrated benefits recap – in case you thought Gemba was “just” a Git app for designers ;-)</li>
+		<li>Create a sample repository in your GitHub account with one click. It gently guides you to your first delivered asset, and lets you familiarize yourself with how Gemba works.</li>
+		<li>Connect an existing repository from your GitHub account by choosing it from a list.</li>
+	</ul>
+
+	<h3>New features</h3>
+	<ul>
+		<li>Performance! You should see some <em>serious</em> improvements in repositories with 1.000+ assets, both scrolling assets and switching repositories. (h/t Jenni, Flow)</li>
+		<li>Connecting a bare local repository now treats it as a remote and clones it to a working copy. (h/t Flow)</li>
+		<li>Gemba re-confirms with you before pushing <em>anything</em> to the remote repository.
+		<li>Open a repository in an external Git client or editor (Repository → Show In):<br />
+			<img src="../img/gemba-menu-open-in.png" alt="Open repository in Terminal, Finder, Tower 2, SourceTree, GitHub, GitX, Gitbox, Xcode, Sublime Text 2" />
+		</li>
+	</ul>
+
+	<h3>Bugfixes</h3>
+	<ul>
+		<li>Asset folders now sorted alphabetically.</li>
+		<li>Connecting a local repository while offline no longer shows an unnecessary error.</li>
+		<li>Fixed asset filenames were sometimes truncated.</li>
+		<li>Fixed problems with some SCP-style syntax repository URLs.</li>
+		<li>Fixed Repository menu items being enabled even when the main window was not visible. (h/t Flow)</li>
+		<li>Fixed acknowledgments formatting.</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+    	<li>Asset drop zone now lists accepted file extensions, as per the repository’s .gemba configuration file.</li>
+    	<li>Increased contrast on asset and configuration drop zones.</li>
+    	<li>“Universal 2x” now simply shown as “2x” in asset list.
+    	<li>Configuration changes can now optionally be pushed to the remote repository later (with the first asset delivery).</li>
+    	<li>Asks for designer/developer role before starting free trial.</li>
+    	<li>Cleaned up Help menu.</li>
+    </ul>
+
+  </body>
+</html>
