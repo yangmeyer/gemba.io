@@ -1,0 +1,443 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+			 More info: h5bp.com/b/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Gemba – Update assets in your iOS app, without Xcode or Git</title>
+	<meta name="description" content="Gemba for Mac makes it easy for designers to deliver assets into Git repositories and Xcode asset catalogs. It streamlines the process of getting images from Photoshop into an app. " />
+	
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+	<!-- Facebook Metadata /-->
+	<meta property="fb:page_id" content="" />
+	<meta property="og:image" content="facebook.jpg" />
+
+	<!-- Google+ Metadata /-->
+	<meta itemprop="image" content="facebook.jpg">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/gumby.css">
+	
+	<!-- Load Modenizr for feature detection FIRST. -->
+	<script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+	<!-- Facebook SDK -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=388378414699236";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+          <a class="page-link" href="#benefits">How it works</a>
+          <a class="page-link" href="#story">About</a>
+          <a class="page-link" href="http://blog.gemba.io">Blog</a>
+      </div>
+    </nav>
+
+	<!-- START: Site Header -->
+	<header role="banner" class="site-header" style="background:white; padding-top:0px; padding-bottom:10px">
+		<div class="row" style="padding:80px 0 50px 0">
+			<div class="nine columns horizontaly-centered-content pull-left-block">
+				<img src="img/Gemba-icon-200.png" class="horizontaly-centered pull-left-block" alt="Gemba icon" style=" margin-right:30px; margin-left:21px" width="200" height="200" />
+				<h1 class="horizontaly-centered pull-left-text" style="color:#4ea3b5; padding-top:18px; padding-bottom:20px; font-size:60px; font-family:inherit">Gemba</h1>
+				<h2 class="horizontaly-centered pull-left-text" style="color:#4ea3b5; padding-top:0px; font-size:30px">Update assets in your iOS app.<br />No Xcode or Git required.</h2>
+			</div>
+
+			<!-- START: Mini signup -->
+			<div class="three columns" id="mc_embed_signup">
+				<div>
+					<p style="color:#666; font-size:0.9rem; margin-bottom:0">
+						Join world-class designer–developer teams:</p>
+
+						<a href="https://pay.paddle.com/checkout/495337" class="bordered-button" style="width:100%; margin-top:0.5em; padding:0.5em 0.2em; line-height:1.5rem; background:#4ea3b5; border-radius:7px;">Buy (39&nbsp;&euro;)</a>
+
+						<a href="download.html" class="bordered-button" style="width:100%; margin-top:0.5em; padding:0.5em 0.2em; line-height:1.5rem; background:#ff983a; border-radius:7px;">Free Trial</a><br />
+						<span style="font-size:0.8rem; color:#666"><a href="releases/0.9.8.html" style="color:black">Beta&nbsp;3</a> for <abbr title="Mac OS X version 10.10 “Yosemite” or 10.11 “El Capitan”">OS&nbsp;X 10.10+</abbr></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- /END: Site Header -->
+	<main role="main" class="site-main-content">
+		
+		<!-- START: Gallery Section -->
+		<section class="site-section section-gallery" style="background:#e5f3f8; padding:30px 0">
+			<!-- START: Gallery Slider -->		
+			<div class="gallery-slider-wrapper row animate-on-scroll" data-scrollanimation="fadeUpIn" style="margin-top:0px">
+				<ul class="gallery-slider twelve columns">
+					<li>
+						<img src="img/gemba-explainer-schematic.png" width="1024" height="464" alt="Drop your exported assets into Gemba, and integrate them into Xcode and Git with a simple click" />
+						<h3 style="text-align:center; font-size:1.4rem; line-height:2.5rem; font-weight:normal"><strong>Drag and drop your exported assets</strong> into Gemba<br />and <strong>integrate them into Xcode and Git</strong> with a simple click.</h3>
+					</li>
+					<li>
+						<img src="img/screenshots/Web-Carousel-asset-catalog.png" alt="Gemba: batch-update images in Xcode asset catalogs" />
+						<h3 style="text-align:center; font-size:1.4rem; line-height:2.5rem; font-weight:normal"><strong>Batch-update</strong> images in Xcode asset catalogs</h3>
+					</li>
+					<li>
+						<img src="img/screenshots/Web-Carousel-checks.png" alt="Gemba: detect and fix problems" />
+						<h3 style="text-align:center; font-size:1.4rem; line-height:2.5rem; font-weight:normal">Detect and <strong>fix problems</strong> before delivering</h3>
+					</li>
+					<li>
+						<img src="img/screenshots/Web-Carousel-Git.png" alt="Gemba: push to Git repository" />
+						<h3 style="text-align:center; font-size:1.4rem; line-height:2.5rem; font-weight:normal"><strong>Deliver to Git</strong> when you’re ready</h3>
+					</li>
+				</ul>
+			</div>
+			<!-- /END: Gallery Slider -->
+		</section>		
+		<!-- /END: Gallery Section  -->
+
+		<a name="benefits"></a>
+		<!-- START: Benefits Section -->
+		<section class="site-section section-benefits centered" data-target="benefits">
+			<div class="row" style="padding-top:30px">
+				<div class="one columns"></div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">Designers</h2>
+
+					<h3>No more waiting for your developers</h3>
+					<p>
+						With Gemba, it’s super easy to update assets yourself, whenever you want.<br />
+					</p>
+
+					<h3>No Xcode or Git required</h3>
+					<p>
+						You just drop in your exported assets. Let Gemba handle Xcode and Git.<br />
+					</p>
+
+					<h3>No more faulty assets</h3>
+					<p>
+						Gemba warns you about implausible and mismatching pixel sizes.<br />
+					</p>
+
+					<h3>Your developers will LOVE you.</h3>
+				</div>
+
+				<div class="two columns" style="text-align:center; color:red; font-size:60px; padding-top:20px">
+					<i class="icon-heart"></i>
+				</div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">Developers</h2>
+
+					<h3>No more manual asset integration</h3>
+					<p>
+						Once you’ve integrated new assets, the designers will update them all by themselves. Have a coffee instead.
+					</p>
+
+					<h3>Review potential problems</h3>
+					<p>
+						See at a glance whether you need to tweak anything: Commit messages tell you about changed pixel sizes for updated assets.
+					</p>
+
+					<p>
+						<a href="#">Get your designers pushing pixels themselves in 4 easy steps.</a>
+					</p>
+
+					<h3>Hug your designer!</h3>
+				</div>
+
+				<div class="one columns"></div>
+			</div>
+		</section>
+		<!-- END: Benefits Section -->
+
+		<!-- START: Testimonials Section -->
+		<section class="site-section section-testimonials ribbon" style="padding-top:20px; padding-bottom:0;">
+			<div class="row">
+				<div class="ten columns centered">
+
+					<blockquote>
+						With Gemba <em>designers can finally explore full potential of git workflow</em> and, dare I say, <em>enjoy using it.</em>
+						<cite><span class="testimonials-author">Andrey Zhukov</span>, Founding Engineer at Toca Boca<img src="img/testimonials/tocaboca.png" width="50" height="50" alt="Toca Boca" /></cite>
+					</blockquote>
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Testimonials Section  -->
+
+		<!-- START: How it works Section -->
+		<section class="site-section section-benefits centered" data-target="benefits">
+			<div class="row">
+				<div class="one columns"></div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">How you use Gemba</h2>
+
+					<h4>Add or update assets</h4>
+					<p>Drop assets into Gemba. Gemba puts the assets where they belong.</p>
+					<p>Existing assets will be updated, and image sets created for new assets.</p>
+
+					<h4>Review and fix common mistakes</h4>
+					<p>Gemba warns you about potential problems with your assets.</p>
+					<p>You can go fix the assets and re-drop them into Gemba.</p>
+
+					<h4>Deliver when you’re ready</h4>
+					<p>Describe your changes and press Deliver Changes.</p>
+					<p>Only now are your changes pushed to the app’s hosted Git repository, which your developers see and use.</p>
+
+					<p style="margin-top:2em;"><a href="faq-designer.html" style="font-weight:bold">Designer FAQ</a></p>
+				</div>
+
+				<div class="two columns" style="text-align:center; color:red; font-size:60px; padding-top:20px; opacity:0">
+					<i class="icon-heart"></i>
+				</div>
+
+				<div class="four columns">
+					<h2 style="text-align:center">What it does under the hood</h2>
+
+					<h4>Assets are copied to the local working copy</h4>
+					<p>Existing assets with matching filenames are replaced.</p>
+					<p>New assets can be added to an asset catalog as an image set.</p>
+
+					<h4>Changes are local until delivered</h4>
+					<p>The changes are only pushed once the designer presses Deliver Changes.</p>
+
+					<h4>Deliver = pull, then push</h4>
+					<p>Any remote changes are fetched, and a commit with the local changes played on top of them.</p>
+					<p>Merge conflicts? The designer gets to choose --ours/--theirs.</p>
+
+
+					<p style="margin-top:2em;"><a href="faq-developer.html" style="font-weight:bold">Developer FAQ</a></p>
+				</div>
+
+				<div class="one columns"></div>
+			</div>
+			<div class="row" style="padding-top:2em">
+				<ul style="text-align:center; color:#999; font-size:0.8em">
+					<li>Works best for teams working on <strong>iOS or Mac apps</strong> using <strong>Xcode</strong>. (Support for Android Studio coming soon.)</li>
+					<li>Works perfectly with <strong>Sketch</strong>, <strong>Photoshop</strong>, or any other tool that exports assets.</li>
+					<li>Works with <strong>any hosted or self-hosted Git repository</strong>, e.g. on GitHub, Bitbucket, Stash, Gitlab.</li>
+					<li><strong>No lock-in.</strong> Gemba uses plain Git, so you can switch to other services should you choose to. (But you won’t.)</li>
+				</ul>
+			</div>
+		</section>
+		<!-- END: How it works Section -->
+
+		<!-- START: Testimonials Section -->
+		<section class="site-section section-testimonials ribbon" style="padding-top:20px; padding-bottom:0;">
+			<div class="row">
+				<div class="ten columns centered">
+					<blockquote>
+						Yesterday our designer updated an image with Gemba and <em>triggered an automatic deploy</em> to our staging server. <em>How awesome is that?</em>
+						<cite><span class="testimonials-author">Henric Malmberg</span>, CTO at Weld.io<img src="img/testimonials/henric-malmberg.png" width="50" height="50" alt="Henric Malmberg" /></cite>
+					</blockquote>
+
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Testimonials Section  -->
+
+		<!-- START: Personal message Section -->
+		<a name="story"></a>
+		<section class="site-section section-personal-message">
+			<div class="row">
+				<div class="ten columns centered">
+					<h2 style="margin-bottom:1em">Why I made Gemba</h2>
+
+					<p>Over the past years of creating mobile apps with many different teams, I noticed the same re-occurring challenges with how we, as <em>designers and developers</em>, work together.</p>
+
+					<p>I believe that <em>deeper collaboration makes for better apps.</em> With Gemba, I hope to bring designers and developers closer together through better tooling. Gemba allows designers to <em>work on the living product itself</em> – the real place, or “Gemba” in Japanese.</p>
+
+					<p class="personal-message-author"><img src="img/testimonials/yang-round.png" style="vertical-align:middle; margin-right:0.4em" width="50" height="50" alt="Yang Meyer" /><a href="mailto:yang@gemba.io">Yang Meyer</a>, Stockholm/Frankfurt</p>
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Personal message Section  -->
+
+		<!-- START: Testimonials Section -->
+		<section class="site-section section-testimonials ribbon" style="padding-top:20px; padding-bottom:0;">
+			<div class="row">
+				<div class="ten columns centered">
+
+					<blockquote>
+						<em>I can’t even think of not using Gemba</em>, even after using it just for this little bit. The <em>ease of use</em> of adding new images is <em>so great</em>.
+						<cite><span class="testimonials-author">Adam Selby</span>, Designer at 88&nbsp;Oak<img src="img/testimonials/adam-selby.png" width="50" height="50" alt="Adam Selby" /></cite>
+					</blockquote>
+				</div>
+			</div>
+		</section>		
+		<!-- /END: Testimonials Section  -->
+
+				<!-- START: Download Section -->
+		<section class="site-section section-download" data-target="download">
+		<!-- START: Sign Up Section -->
+		<section class="site-section section-signup" data-target="signup">
+			<!-- START: Section Header -->
+			<div class="row section-header">
+				<div class="twelve columns">
+					<h3>Get Gemba</h3>
+
+					<p style="margin:1.5em 0">Join some of the <strong>world’s best designer–developer teams</strong>. Try Gemba for free, or buy for just 39&nbsp;&euro;:</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="three columns">
+				</div>
+				<div class="three columns">
+					<p style="text-align:center">
+						<a href="https://pay.paddle.com/checkout/495337" class="bordered-button" style="width:100%; margin-top:0.5em; padding:0.5em 0.2em; line-height:1.5rem; background:#4ea3b5; border-radius:7px;">Buy (39&nbsp;&euro;)</a>
+					</p>
+				</div>
+				<div class="three columns">
+					<p style="text-align:center">
+						<a href="download.html" class="bordered-button" style="width:100%; margin-top:0.5em; padding:0.5em 0.2em; line-height:1.5rem; background:#ff983a; border-radius:7px;">Free Trial</a><br />
+						<span style="font-size:0.8rem; color:#666"><a href="releases/0.9.8.html" style="color:black">Beta&nbsp;3</a> for OS&nbsp;X 10.10+</span>
+					</p>
+				</div>
+				<div class="three columns">
+				</div>
+			</div>
+			<div class="row" style="padding-top:5em; padding-bottom:1em;">
+				<div class="nine columns centered">
+					<p style="text-align:center">Join the mailing list:</p>
+				</div>
+			</div>
+			<!-- /END: Section Header -->
+			<div class="row">
+				<div class="seven columns centered" id="mc_embed_signup">
+
+					<form role="form" action="http://app.us4.list-manage1.com/subscribe/post?u=5d34b5747a626d1665f586dd0&amp;id=c3bce2b566" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+		                <input class="large-input-side" type="email" placeholder="Your email address" autocomplete="off" name="EMAIL" id="mce-EMAIL" />
+		                <input type="submit" class="large-btn-side" value="Join" name="subscribe" id="mc-embedded-subscribe" />
+		                <div class="catch-errors"></div>
+		                <div id="mce-responses" class="clear">
+	<div class="response" id="mce-error-response" style="display:none"></div>
+	<div class="response" id="mce-success-response" style="display:none"></div>
+</div>
+<div style="position: absolute; left: -5000px;"><input type="text" name="b_5d34b5747a626d1665f586dd0_c3bce2b566" value=""></div>
+
+						<p style="width:100%; margin-top:0.5em; text-align:center; color:#666; font-size:0.8rem">Less than 1 email per month, and never spam.</p>
+			        </form>
+
+				</div>
+			</div>				
+		</section>		
+		<!-- /END: Sign Up Section  -->
+
+	</main>
+	<!-- START: Site Footer -->
+	<footer role="contentinfo" class="site-footer">
+		<div class="row">
+			<div class="six columns">
+				<p style="color:white">&copy; 2014&#8211;2015 <a href="http://yangmeyer.de/" style="color:inherit">Yang Meyer</a>. Made in Stockholm and Frankfurt.</p>
+			</div>
+			<div class="six columns">
+				<div style="text-align:right">
+					<a href="https://twitter.com/GembaApp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @GembaApp</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+					&nbsp;&nbsp;
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.gemba.io" data-size="large" data-related="GembaApp">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+					&nbsp;&nbsp;
+
+					<div class="fb-like" data-href="http://gemba.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /END: Site Footer -->
+
+	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
+	<!-- 2.0 for modern browsers, 1.10 for .oldie -->
+	<script>
+	var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+	if(!oldieCheck) {
+	document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+	} else {
+	document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+	}
+	</script>
+	<script>
+	if(!window.jQuery) {
+	if(!oldieCheck) {
+	  document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+	} else {
+	  document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	}
+	</script>
+
+	<!--
+	Include gumby.js followed by UI modules followed by gumby.init.js
+	Or concatenate and minify into a single file -->
+	<script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
+	<script src="js/libs/ui/gumby.retina.js"></script>
+	<script src="js/libs/ui/gumby.fixed.js"></script>
+	<script src="js/libs/ui/gumby.skiplink.js"></script>
+	<script src="js/libs/ui/gumby.toggleswitch.js"></script>
+	<script src="js/libs/ui/gumby.checkbox.js"></script>
+	<script src="js/libs/ui/gumby.radiobtn.js"></script>
+	<script src="js/libs/ui/gumby.tabs.js"></script>
+	<script src="js/libs/ui/gumby.navbar.js"></script>
+	<script src="js/libs/ui/gumby.parallax.js"></script>
+	<script src="js/libs/ui/gumby.shuffle.js"></script>	
+	<script src="js/libs/ui/jquery.validation.js"></script>
+
+	<!-- Must Come LAST (after gumby components)  -->
+	<script src="js/libs/gumby.init.js"></script>
+
+	<!--
+	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
+	<script src="js/libs/gumby.min.js"></script> -->
+
+	<!-- External Plugins Not Linked Directly to Gumby -->
+
+	<script src="js/plugins/jquery.bxslider.min.js"></script>
+	<script src="js/plugins/waypoints.min.js"></script>
+	<script src="js/plugins/placeholders.js"></script>
+
+	<!-- Custom theme specific interaction -->
+	<script src="js/theme.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-46201230-3', 'gemba.io');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+  </body>
+</html>
