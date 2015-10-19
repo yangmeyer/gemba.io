@@ -7,20 +7,6 @@
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
-	<!-- Google Analytics Content Experiment code -->
-	<script>function utmx_section(){}function utmx(){}(function(){var
-	k='80464234-0',d=document,l=d.location,c=d.cookie;
-	if(l.search.indexOf('utm_expid='+k)>0)return;
-	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-	</script><script>utmx('url','A/B');</script>
-	<!-- End of Google Analytics Content Experiment code -->
 
 	<meta charset="utf-8">
 
@@ -30,7 +16,7 @@
 
 	<title>Gemba – Streamlined asset pipeline for designer–developer teams</title>
 	<meta name="description" content="Gemba for Mac makes it easy for designers to deliver assets into Git repositories and Xcode asset catalogs. It streamlines the process of getting images from Photoshop into an app. " />
-	
+
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
 	<!-- Facebook Metadata /-->
@@ -49,8 +35,6 @@
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
 	However, there is a blank style.css in the css directory should you prefer -->
 	<link rel="stylesheet" href="css/gumby.css">
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
-
 	<!-- Load Modenizr for feature detection FIRST. -->
 	<script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
@@ -108,10 +92,10 @@
 	</header>
 	<!-- /END: Site Header -->
 	<main role="main" class="site-main-content">
-		
+
 		<!-- START: Gallery Section -->
 		<section class="site-section section-gallery" style="background:#e5f3f8; padding:30px 0">
-			<!-- START: Gallery Slider -->		
+			<!-- START: Gallery Slider -->
 			<div class="gallery-slider-wrapper row animate-on-scroll" data-scrollanimation="fadeUpIn" style="margin-top:0px">
 				<ul class="gallery-slider twelve columns">
 					<li>
@@ -133,7 +117,7 @@
 				</ul>
 			</div>
 			<!-- /END: Gallery Slider -->
-		</section>		
+		</section>
 		<!-- /END: Gallery Section  -->
 
 		<a name="benefits"></a>
@@ -145,11 +129,17 @@
 				<div class="four columns">
 					<h2 style="text-align:center">Designers</h2>
 
-					<h3>Integrate assets without a developer</h3>
+					<h3>No more waiting for developers</h3>
 					<p>
-						Deliver assets straight into the Git repository, whenever you want.<br />
-						No more waiting for your developers.
+						Update assets yourself effortlessly, whenever you want.
 					</p>
+
+<!--
+					<h3>No Xcode or Git required</h3>
+					<p>
+						You just drop in your exported assets. Let Gemba handle Xcode and Git.<br />
+					</p>
+				-->
 
 					<h3>Find and fix problems</h3>
 					<p>
@@ -157,7 +147,9 @@
 						Never deliver faulty assets again.
 					</p>
 
+<!--
 					<h3>Your developers will LOVE you.</h3>
+				-->
 				</div>
 
 				<div class="two columns" style="text-align:center; color:red; font-size:60px; padding-top:20px">
@@ -169,15 +161,16 @@
 
 					<h3>No more manual asset integration</h3>
 					<p>
-						Once you’ve integrated new assets, the designers will update them all by themselves. Have a coffee instead.
+						Designers can update existing assets all by themselves. Have a coffee instead.
 					</p>
 
-					<h3>Review potential problems</h3>
+					<h3>Review changes</h3>
 					<p>
-						See at a glance whether you need to tweak anything: Commit messages tell you about changed pixel sizes for updated assets.
+						Every asset delivery is a commit, with helpful commit messages that point out potential problems.
 					</p>
-
+<!--
 					<h3>Hug your designer!</h3>
+				-->
 				</div>
 
 				<div class="one columns"></div>
@@ -196,32 +189,26 @@
 					</blockquote>
 				</div>
 			</div>
-		</section>		
+		</section>
 		<!-- /END: Testimonials Section  -->
 
 		<!-- START: How it works Section -->
 		<section class="site-section section-benefits centered" data-target="benefits">
 			<div class="row">
-				<div class="twelve columns">
-					<h2 style="text-align:center">How Gemba works</h2>
-				</div>
-			</div>
-
-			<div class="row">
 				<div class="one columns"></div>
 
 				<div class="four columns">
-					<h3 style="font-size:1.7rem">for designers</h2>
+					<h2 style="text-align:center">How you use Gemba</h2>
 
-					<h4>1. Add new/updated assets</h4>
+					<h4>Add or update assets</h4>
 					<p>Drop assets into Gemba. Gemba puts the assets where they belong.</p>
-					<p>Existing assets will be updated, and create image sets for new assets.</p>
+					<p>Existing assets will be updated, and image sets created for new assets.</p>
 
-					<h4>2. Review and fix common mistakes</h4>
+					<h4>Review and fix common mistakes</h4>
 					<p>Gemba warns you about potential problems with your assets.</p>
 					<p>You can go fix the assets and re-drop them into Gemba.</p>
 
-					<h4>3. Deliver when you’re ready</h4>
+					<h4>Deliver when you’re ready</h4>
 					<p>Describe your changes and press Deliver Changes.</p>
 					<p>Only now are your changes pushed to the app’s hosted Git repository, which your developers see and use.</p>
 
@@ -233,15 +220,14 @@
 				</div>
 
 				<div class="four columns">
-					<h3 style="font-size:1.7rem">for developers</h2>
-
-					<h4>Changes are local until delivered</h4>
-					<p>Gemba manages a local working copy for each repo.</p>
-					<p>The designer’s changes are only pushed once she presses Deliver Changes.</p>
+					<h2 style="text-align:center">What it does under the hood</h2>
 
 					<h4>Assets are copied to the working copy</h4>
 					<p>Existing assets with matching filenames are replaced.</p>
 					<p>New assets can be added to an asset catalog as an image set.</p>
+
+					<h4>Changes are local until delivered</h4>
+					<p>The changes are only pushed once the designer presses Deliver Changes.</p>
 
 					<h4>Deliver = pull, then push</h4>
 					<p>Any remote changes are fetched, and a commit with the local changes played on top of them.</p>
@@ -252,6 +238,14 @@
 				</div>
 
 				<div class="one columns"></div>
+			</div>
+			<div class="row" style="padding-top:2em">
+				<ul style="text-align:center; color:#999; font-size:0.8em">
+					<li>Works best for teams working on <strong>iOS or Mac apps</strong> using <strong>Xcode</strong>. (Support for Android Studio coming soon.)</li>
+					<li>Works perfectly with <strong>Sketch</strong>, <strong>Photoshop</strong>, or any other tool that exports assets.</li>
+					<li>Works with <strong>any hosted or self-hosted Git repository</strong>, e.g. on GitHub, Bitbucket, Stash, Gitlab.</li>
+					<li><strong>No lock-in.</strong> Gemba uses plain Git, so you can switch to other services should you choose to. (But you won’t.)</li>
+				</ul>
 			</div>
 		</section>
 		<!-- END: How it works Section -->
@@ -267,7 +261,7 @@
 
 				</div>
 			</div>
-		</section>		
+		</section>
 		<!-- /END: Testimonials Section  -->
 
 		<!-- START: Personal message Section -->
@@ -284,21 +278,8 @@
 					<p class="personal-message-author"><img src="img/testimonials/yang-round.png" style="vertical-align:middle; margin-right:0.4em" width="50" height="50" alt="Yang Meyer" /><a href="mailto:yang@gemba.io">Yang Meyer</a>, Stockholm/Frankfurt</p>
 				</div>
 			</div>
-		</section>		
+		</section>
 		<!-- /END: Personal message Section  -->
-
-		<!-- START: Testimonials Section -->
-		<section class="site-section section-testimonials ribbon" style="padding-top:50px; padding-bottom:0; display:none">
-			<div class="row">
-				<div class="ten columns centered">
-					<blockquote>
-					￼￼￼￼￼<em>Really interesting!</em>
-						<cite><span class="testimonials-author">John Maeda</span>, <!-- Design Partner at Kleiner Perkins Caufield &amp; Byers--> Design Guru, Author of “The Laws of Simplicity”<img src="img/testimonials/johnmaeda.jpeg" width="50" height="50" alt="John Maeda" /></cite>
-					</blockquote>
-				</div>
-			</div>
-		</section>		
-		<!-- /END: Testimonials Section  -->
 
 		<!-- START: Testimonials Section -->
 		<section class="site-section section-testimonials ribbon" style="padding-top:50px; padding-bottom:0;">
@@ -311,7 +292,7 @@
 					</blockquote>
 				</div>
 			</div>
-		</section>		
+		</section>
 		<!-- /END: Testimonials Section  -->
 
 				<!-- START: Download Section -->
@@ -345,7 +326,7 @@
 			</div>
 			<div class="row" style="padding-top:5em; padding-bottom:1em;">
 				<div class="nine columns centered">
-					<p style="text-align:center">Join the mailing list to be notified before anybody else:</p>
+					<p style="text-align:center">Join the mailing list:</p>
 				</div>
 			</div>
 			<!-- /END: Section Header -->
@@ -366,8 +347,8 @@
 			        </form>
 
 				</div>
-			</div>				
-		</section>		
+			</div>
+		</section>
 		<!-- /END: Sign Up Section  -->
 
 	</main>
@@ -427,7 +408,7 @@
 	<script src="js/libs/ui/gumby.tabs.js"></script>
 	<script src="js/libs/ui/gumby.navbar.js"></script>
 	<script src="js/libs/ui/gumby.parallax.js"></script>
-	<script src="js/libs/ui/gumby.shuffle.js"></script>	
+	<script src="js/libs/ui/gumby.shuffle.js"></script>
 	<script src="js/libs/ui/jquery.validation.js"></script>
 
 	<!-- Must Come LAST (after gumby components)  -->
@@ -457,7 +438,7 @@
 	  ga('send', 'pageview');
 
 	</script>
-	
+
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7 ]>
