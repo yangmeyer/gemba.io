@@ -5,9 +5,19 @@
         <link>http://gemba.io/releases/gemba-appcast.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
-        
+
         <!-- newer versions here -->
-        
+
+        <item>
+            <title>Version 0.9.9 (bugfixes)</title>
+            <sparkle:releaseNotesLink>
+                http://gemba.io/releases/0.9.9.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 04 May 2016 12:00:00 +0200</pubDate>
+            <enclosure url="https://vendors.paddle.com/download/product/495337" sparkle:version="0.9.9" sparkle:shortVersionString="0.9.9" length="17418320" type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+        </item>
+
         <item>
             <title>Version 0.9.8 (Beta 3) (6 bugs fixed; GitHub onboarding, external Git clients, performance)</title>
             <sparkle:releaseNotesLink>

@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Gemba – v0.9.9</title>
+	<style type="text/css">
+	body {
+		font-family:"Helvetica Neue", Helvetica;
+	}
+	</style>
+</head>
+
+<body>
+
+	<p>Version 0.9.9 brings important bugfixes and usability improvements.</p>
+
+	<h3>Bugfixes</h3>
+	<ul>
+		<li>Fixed crash when connecting a GitHub account that does not contain repositories.</li>
+		<li>Fixed hang when pushing configuration changes.</li>
+		<li>Fixed possible hang when resolving merge conflicts.</li>
+		<li>Fixed possible race condition when selecting an existing GitHub repository.</li>
+		<li>Fixed asset dimensions occasionally appearing on folder rows.</li>
+  </ul>
+
+  <h3>Changes</h3>
+  <ul>
+		<li>Streamlined trial signup flow: from landing page, to mailing list confirmation, to getting started.</li>
+		<li>When adding assets to a repository without subfolders, Gemba no longer asks for the target folder but just copies them to the root folder.</li>
+		<li>Repositories with an "empty" remote, i.e. without a branch, are now supported.</li>
+		<li>Removed Google Analytics tracking.</li>
+  </ul>
+
+  </body>
+</html>
